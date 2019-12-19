@@ -7,6 +7,8 @@ module.exports = {
     let condition = getCondition(parseMessage, message);
 
     if ( condition ) {
+      let options = getOptions();
+      console.log(options);
       let response = request(getOptions());
 
       if (response.err) { return {}}
@@ -25,8 +27,7 @@ function getCondition(parseMessage, message) {
 
 function getOptions() {
   return {
-    uri: '',
-    baseURL: 'http://localhost/3000',
+    uri: 'http://localhost:3000/saveMessage',
     method: 'POST',
     headers: {}
   }

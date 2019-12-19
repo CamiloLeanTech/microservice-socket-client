@@ -18,7 +18,7 @@ let message = {
   name:     'p1'
 };
 
-let job  = new CronJob('*/01 * * * * *', () => {
+let job  = new CronJob('*/10 * * * * *', () => {
   let random = Math.round(Math.random());
   random ? data.on++ : data.out++;  
 
