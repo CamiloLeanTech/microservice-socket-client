@@ -8,8 +8,7 @@ module.exports = {
 
     if ( condition ) {
       let options = getOptions();
-      console.log(options);
-      let response = request(getOptions());
+      let response = request(options);
 
       if (response.err) { return {}}
 

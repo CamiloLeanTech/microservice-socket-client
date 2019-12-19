@@ -30,7 +30,6 @@ ioClient.on('counter-server', (incomingMessage) => {
   let response = messageValidation.validate(incomingMessage, message);
 
   if (response) { 
-    ioClient.emit('counter-page', response) 
-  } else { 
+    ioClient.emit('counter-server-page', incomingMessage); 
   }
 });

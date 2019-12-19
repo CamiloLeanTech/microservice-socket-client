@@ -6,5 +6,5 @@ module.exports = function(options) {
       err ? console.log(err) : null;
       resolve({ err, body: body || [], options });
     })
-  })
+  });
 }
