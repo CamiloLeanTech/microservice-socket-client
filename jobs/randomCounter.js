@@ -18,7 +18,7 @@ let message = {
   name:     'p1'
 };
 
-let job  = new CronJob('*/10 * * * * *', () => {
+let job  = new CronJob('*/05 * * * * *', () => {
   let random = Math.round(Math.random());
   random ? data.on++ : data.out++;  
 
@@ -29,5 +29,8 @@ let job  = new CronJob('*/10 * * * * *', () => {
 ioClient.on('counter-server', (incomingMessage) => {
   let response = messageValidation.validate(incomingMessage, message);
 
-  if (response) { ioClient.emit('counter-page', response) } else { console.log('No se pudo mostrar en la pagina') }
+  if (response) { 
+    ioClient.emit('counter-page', response) 
+  } else { 
+  }
 });
